@@ -1,5 +1,5 @@
 {
-	"name": "react-vite-template",
+	"name": "envest-api-frontend",
 	"version": "0.0.0",
 	"private": true,
 	"type": "module",
@@ -15,7 +15,7 @@
 		"*.{ts,tsx}": [
 			"eslint --fix"
 		],
-		"*.{ts,tsx,css,scss,json,md}": [
+		"*.{ts,tsx,css,scss,json,md,svg}": [
 			"prettier --write"
 		]
 	},
@@ -36,6 +36,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^19.2.1",
 		"@commitlint/config-conventional": "^19.1.0",
+		"@svgr/plugin-prettier": "^8.1.0",
 		"@types/react": "^18.2.74",
 		"@types/react-dom": "^18.2.24",
 		"@typescript-eslint/eslint-plugin": "^7.5.0",

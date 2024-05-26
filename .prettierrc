@@ -2,5 +2,5 @@
 	"useTabs": true,
 	"tabWidth": 4,
 	"printWidth": 120,
-	"plugins": ["prettier-plugin-organize-imports", "prettier-plugin-packagejson"]
+	"plugins": ["prettier-plugin-organize-imports", "prettier-plugin-packagejson", "@svgr/plugin-prettier"]
 }

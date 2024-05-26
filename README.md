@@ -1,30 +1,62 @@
-# React + TypeScript + Vite
+# Envest Global API Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+### Admin
 
--   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
--   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   Manage users
+    -   Create user
+    -   Update user (password, active)
+    -   Get user list
 
-## Expanding the ESLint configuration
+### User
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+-   Manage API keys
+    -   Create API key (title, description, end date)
+    -   Delete API key
 
--   Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default {
-	// other rules...
-	parserOptions: {
-		ecmaVersion: "latest",
-		sourceType: "module",
-		project: ["./tsconfig.json", "./tsconfig.node.json"],
-		tsconfigRootDir: __dirname,
-	},
-};
+### Requirements
+
+-   Node.js (20x)
+
+### Steps
+
+1.  Clone the repository
+
+```sh
+git clone <repo-url/>
 ```
 
--   Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
--   Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
--   Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2.  Install dependencies
+
+    ```bash
+    npm install
+    ```
+
+3.  Start the development server
+
+    ```bash
+    npm start
+    ```
+
+4.  Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+5.  Build the project
+
+    ```bash
+    npm run build
+    ```
+
+## Development
+
+You can use docker compose to start the production environment locally.
+
+```bash
+docker-compose up -d
+```
+
+## Commitlint
+
+This project uses [commitlint](https://commitlint.js.org/) to enforce a commit message convention. The commit message convention is based on the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
