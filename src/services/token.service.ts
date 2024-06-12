@@ -4,6 +4,7 @@
  * - Save the access token to the local storage
  * - Get the access token from the local storage
  * - Remove the access token from the local storage
+ * @author Kim Minh Thang
  */
 export class TokenService {
 	/**
