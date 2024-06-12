@@ -1,9 +1,10 @@
-import { useHtmlMinifyPlugin } from "@tomjs/vite-plugin-html";
+import html from "@tomjs/vite-plugin-html";
 import react from "@vitejs/plugin-react-swc";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
-import prefetchPlugin from "vite-plugin-bundle-prefetch";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import { nodePolyfills } from "vite-plugin-node-polyfills";
+import { optimizeCssModules } from "vite-plugin-optimize-css-modules";
 import { VitePWA } from "vite-plugin-pwa";
 
 // https://vitejs.dev/config/
@@ -11,8 +12,9 @@ export default () => {
 	return defineConfig({
 		plugins: [
 			react(),
-			prefetchPlugin(),
-			useHtmlMinifyPlugin(),
+			nodePolyfills(),
+			optimizeCssModules(),
+			html({ minify: true }),
 			ViteImageOptimizer(),
 			VitePWA({
 				registerType: "autoUpdate",
@@ -57,6 +59,9 @@ export default () => {
 			alias: {
 				"@": fileURLToPath(new URL("./src", import.meta.url)),
 			},
+		},
+		build: {
+			assetsInlineLimit: 100000000,
 		},
 	});
 };
