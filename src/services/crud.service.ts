@@ -7,6 +7,7 @@ import { BaseService } from "./base.service";
  * - GET: Read (All and Single)
  * - PUT: Update
  * - DELETE: Delete
+ * @author Kim Minh Thang
  */
 export class CrudService<T = unknown> extends BaseService {
 	/**

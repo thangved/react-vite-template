@@ -2,6 +2,7 @@ import { AxiosInstance } from "axios";
 
 /**
  * Base service class to be extended by other services
+ * @author Kim Minh Thang
  */
 export class BaseService {
 	/**
